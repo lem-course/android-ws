@@ -9,15 +9,16 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val API_KEY = ""
         const val WS_URL = "https://www.omdbapi.com/?s=%s&apikey=$API_KEY"
-        val TAG: String = MainActivity::class.java.canonicalName!!
     }
+
+    private val tag = this::class.java.canonicalName
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         search_btn.setOnClickListener {
-            Log.i(TAG, "Searching ...")
+            Log.i(tag, "Searching ...")
             query.setText("")
         }
     }
