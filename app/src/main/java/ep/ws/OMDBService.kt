@@ -18,8 +18,8 @@ object OMDBService {
             const val API_KEY = "pridobite_svoj_kljuc"
         }
 
-        @GET("/")
-        fun search(@Query("s") searchQuery: String): Call<SearchResponse>
+        // TODO: Definicija klica REST API storitve
+        // http https://www.omdbapi.com/\?s\="dsadadsadadas"\&apikey\=aaa
     }
 
     val instance: OmdbApi by lazy {
