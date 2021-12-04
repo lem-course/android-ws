@@ -15,11 +15,11 @@ object OMDBService {
 
         companion object {
             const val URL = "https://www.omdbapi.com/"
-            const val API_KEY = "pridobite_svoj_kljuc"
+            const val API_KEY = "bc9d48a"
         }
 
-        // TODO: Definicija klica REST API storitve
-        // http https://www.omdbapi.com/\?s\="dsadadsadadas"\&apikey\=aaa
+        @GET("/")
+        fun search(@Query("s") query: String): Call<SearchResponse>
     }
 
     val instance: OmdbApi by lazy {
